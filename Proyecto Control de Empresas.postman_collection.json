@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "904d1293-a5cc-4ef2-a00d-67efb9c953f6",
+		"name": "Proyecto Control de Empresas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CRUD EMPRESA",
+			"item": [
+				{
+					"name": "GET Mostrar Empresas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/empresas/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresas",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Agregar Empresas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"BIMBO\",\r\n    \"tipo\": \"FABRICA DE DERIVADOS DE GRANOS INTEGRALES\",\r\n    \"correo\": \"BIMBO@corrreo.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/empresas/agregar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresas",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Editar Empresa",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAzODVmYmU3M2I4MGM0NzgyNDQ3NWYiLCJpYXQiOjE2Nzc5NTI1MjMsImV4cCI6MTY3Nzk2NjkyM30.6MC_jq3mgu4SkFNrpxUYShd7EaS-6uUKc3ax3hZgXNQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"BIMBO SA\",\r\n    \"tipo\": \"FABRICA DE DERIVADOS DE GRANOS INTEGRALES.\",\r\n    \"correo\": \"BIMBOGT@corrreo.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/empresas/editar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresas",
+								"editar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Eliminar Empresa",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAzODYzYWU3M2I4MGM0NzgyNDQ3NjUiLCJpYXQiOjE2Nzc5NTI1ODYsImV4cCI6MTY3Nzk2Njk4Nn0.Mo25ruYED6grUiMvRGIlm4uswv3PJHjgHgNJEkeMw9c",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/empresas/eliminar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresas",
+								"eliminar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD SUCURSALES",
+			"item": [
+				{
+					"name": "GET Mostrar Sucursales",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2ZlOTI3NDhjMjQ3ZGQwOWFmNmJmNWIiLCJpYXQiOjE2Nzc5NTI2MjQsImV4cCI6MTY3Nzk2NzAyNH0.2107XnQ28u2YDynFhvISibFw0GViv2Mko-TOTh8jFTo",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/sucursales/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursales",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Agregar Sucursales",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAzODVmYmU3M2I4MGM0NzgyNDQ3NWYiLCJpYXQiOjE2Nzc5NTI2NjksImV4cCI6MTY3Nzk2NzA2OX0.zyTkBX9m5HW4E7PODTtobOYsZbyvOvSruUMoXi5l7Lw",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Local No.52 VN\",\r\n    \"ubicacion\" : \"Guatemala, Villa Nueva Zona 10 Col. Parque Central\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/sucursales/agregar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursales",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Editar Sucursal",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAzODVmYmU3M2I4MGM0NzgyNDQ3NWYiLCJpYXQiOjE2Nzc5NTI2NjksImV4cCI6MTY3Nzk2NzA2OX0.zyTkBX9m5HW4E7PODTtobOYsZbyvOvSruUMoXi5l7Lw",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Local No.51 VN\",\r\n    \"ubicacion\" : \"Guatemala, Villa VN Zona 10 Col. El Valle 1-23\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/sucursales/editar/c5a0b1c1-97ab-40e6-b6bf-4b22b12e46ee",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursales",
+								"editar",
+								"c5a0b1c1-97ab-40e6-b6bf-4b22b12e46ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Eliminar Sucursal",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAzODVmYmU3M2I4MGM0NzgyNDQ3NWYiLCJpYXQiOjE2Nzc5NTI2NjksImV4cCI6MTY3Nzk2NzA2OX0.zyTkBX9m5HW4E7PODTtobOYsZbyvOvSruUMoXi5l7Lw",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/sucursales/eliminar/c5a0b1c1-97ab-40e6-b6bf-4b22b12e46ee",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursales",
+								"eliminar",
+								"c5a0b1c1-97ab-40e6-b6bf-4b22b12e46ee"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login Empresa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"BIMBOGT@corrreo.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
